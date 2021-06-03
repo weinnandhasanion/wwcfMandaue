@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import './css/style.scss';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Services from './components/Services';
+import Ministries from './components/Ministries';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+  const [ isScrolled, setIsScrolled ] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const yPos = window.pageYOffset;
+
+      yPos !== 0 ? setIsScrolled(true) : setIsScrolled(false);
+    }); 
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      <Home/>
+      <Services />
+      <Ministries />
+      <div style={{height: '500px'}}></div>
+      <Footer isScrolled={isScrolled} />
     </div>
   );
 }
