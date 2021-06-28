@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   font-size: 1.6rem;
-  font-family: 'Work Sans', sans-serif;  
+  font-family: "Work Sans", sans-serif;
   user-select: none;
   scroll-behavior: smooth;
 
@@ -33,7 +33,7 @@ $primary: rgb(44, 108, 180);
   background: transparent;
   color: white;
   border-radius: 5px;
-  transition: .2s;
+  transition: 0.2s;
   cursor: pointer;
 
   &:hover {
@@ -44,8 +44,8 @@ $primary: rgb(44, 108, 180);
 
 .navbar {
   z-index: 5;
-  position: fixed;
   width: 100%;
+  position: absolute;
   box-sizing: border-box;
   background: rgba(44, 108, 180, 0.7);
   display: flex;
@@ -65,7 +65,7 @@ $primary: rgb(44, 108, 180);
     display: flex;
 
     li {
-      padding: .5em;
+      padding: 0.5em;
       list-style-type: none;
 
       a {
@@ -106,8 +106,8 @@ div#home {
       }
 
       .button-cont {
-        button {
-          margin: .3em;
+        a {
+          margin: 0.3em;
         }
       }
     }
@@ -125,6 +125,7 @@ div#home {
 }
 
 div#services {
+  background: white;
   width: 100%;
 
   div.container {
@@ -161,6 +162,10 @@ div#ministries {
     overflow-x: auto;
     padding-right: 1em;
 
+    h1 {
+      padding: 0;
+    }
+
     &::-webkit-scrollbar {
       height: 5px;
       width: 5px;
@@ -179,27 +184,65 @@ div#ministries {
     .card {
       margin: 2.5em 1em;
       flex: 0 0 auto;
-      height: 300px;
-      max-width: 12.5em !important;
+      height: 375px;
+      max-width: 14em !important;
+      padding: 0 !important;
+      overflow: hidden;
       background: white;
       border-radius: 5px;
-      padding: 2em;
       text-align: center;
+
+      div.img-cont {
+        padding: 0;
+        height: 150px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover !important;
+        }
+      }
+
+      div {
+        padding: 1rem;
+      }
 
       h1 {
         color: black !important;
+        font-size: 2rem !important;
+      }
+
+      p {
+        font-size: 1.3rem;
       }
 
       .button {
-        border: 2px solid black;
-        color: black;
+        border: 2px solid transparent;
+        color: $primary;
 
         &:hover {
           color: white;
-          background: black;
+          border: 2px solid $primary;
+          background: $primary;
         }
       }
     }
+  }
+}
+
+div#location {
+  background: white;
+  width: 100%;
+  padding-bottom: 8rem;
+
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2.5em 0 0 0;
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: $primary;
   }
 }
 
@@ -252,5 +295,87 @@ div#ministries {
 
   i {
     font-size: 1.6rem;
+  }
+}
+
+div#contact {
+  width: 100%;
+  background: transparent;
+  color: white !important;
+
+  div#fixed-bg {
+    background-image: url("./../assets/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -10;
+    filter: grayscale(100%) brightness(12%);
+  }
+
+  div#contact-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    h2,
+    p {
+      font-weight: 300;
+    }
+
+    form {
+      min-width: 300px;
+      color: white;
+
+      input,
+      textarea {
+        color: #ccc !important;
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background: transparent;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      label {
+        font-weight: 300 !important;
+      }
+
+      button {
+        &:hover {
+          background: white;
+          border: 2px solid white;
+          color: black !important;
+        }
+      }
+    }
+  }
+
+  h1 {
+    color: white !important;
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2.5em 0 0 0;
+    font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: $primary;
   }
 }

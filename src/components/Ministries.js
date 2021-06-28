@@ -1,50 +1,71 @@
-import { Parallax } from 'react-parallax';
-import images from './../assets/images';
-import MinistryCard from './MinistryCard';
+import { Parallax } from "react-parallax";
+import images from "./../assets/images";
+import yuppies from "./../assets/yuppies.jpg";
+import MinistryCard from "./MinistryCard";
 
 const Ministries = () => {
   const ministries = [
     {
       id: 0,
-      name: 'Couples Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Couples Ministry",
+      description:
+        "A ministry for couples with a primary goal to raise up God-centered families.",
+      link: "",
+      img: null,
+      alt: "couples",
     },
     {
       id: 1,
-      name: 'Yuppies Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Yuppies Ministry",
+      description:
+        "Are you a young professional who wants to know God's plan for your life? We are ministering to young professionals in our yuppies ministry, teaching them of what God wants them to be!",
+      link: "",
+      img: yuppies,
+      alt: "yuppies",
     },
     {
       id: 2,
-      name: 'Youth Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Youth Ministry",
+      description:
+        "We believe that the youth is the hope for tomorrow. We aim to raise a generation of youth believers with a burning desire to make disciples for Jesus!",
+      link: "",
+      img: null,
+      alt: "youth",
     },
     {
       id: 3,
-      name: 'Young Teens Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Young Teens Ministry",
+      description: "A",
+      link: "",
+      img: null,
+      alt: "young-teens",
     },
     {
       id: 4,
-      name: 'Kids Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Kids Ministry",
+      description:
+        "A ministry for couples with a primary goal to raise up God-centered families.",
+      link: "",
+      img: null,
+      alt: "kids",
     },
     {
       id: 5,
-      name: 'Worship Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Worship Ministry",
+      description:
+        "A ministry for couples with a primary goal to raise up God-centered families.",
+      link: "",
+      img: null,
+      alt: "worship",
     },
     {
       id: 6,
-      name: 'Maintenance Ministry',
-      description: 'A ministry for couples with a primary goal to raise up God-centered families.',
-      link: ''
+      name: "Maintenance Ministry",
+      description:
+        "A ministry for couples with a primary goal to raise up God-centered families.",
+      link: "",
+      img: null,
+      alt: "maintenance",
     },
   ];
 
@@ -53,13 +74,21 @@ const Ministries = () => {
       <Parallax bgImage={images.slider2} strength={300}>
         <h1>JOIN OUR MINISTRIES</h1>
         <div className="ministry-cards">
-        {ministries.map(m => (
-          <MinistryCard key={m.id} name={m.name} description={m.description} link={m.link} />
-        ))}
+          {ministries.map((m) => (
+            <MinistryCard
+              key={m.id}
+              name={m.name}
+              img={m.img}
+              description={m.description}
+              link={m.link}
+              alt={m.alt}
+            />
+          ))}
+          <div style={{ width: "1px", height: "1px", flex: "0 0 auto" }}></div>
         </div>
       </Parallax>
     </div>
   );
-}
+};
 
 export default Ministries;

@@ -1,4 +1,4 @@
-import images from './../assets/images';
+import images from "./../assets/images";
 
 const Nav = () => {
   return (
@@ -8,23 +8,33 @@ const Nav = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <a href="#home" className="nav-link">HOME</a>
+          <a href="#home" className="nav-link">
+            HOME
+          </a>
         </li>
         <li>
-          <a href="#services" className="nav-link">SERVICES</a>
+          <a href="#services" className="nav-link">
+            SERVICES
+          </a>
         </li>
         <li>
-          <a href="#ministries" className="nav-link">MINISTRIES</a>
+          <a href="#ministries" className="nav-link">
+            MINISTRIES
+          </a>
         </li>
         <li>
-          <a href="#" className="nav-link">LOCATION</a>
+          <a href="#location" className="nav-link">
+            LOCATION
+          </a>
         </li>
         <li>
-          <a href="#" className="nav-link">CONTACT</a>
+          <a href="#contact" className="nav-link">
+            CONTACT
+          </a>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;

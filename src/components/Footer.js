@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 const Footer = ({ isScrolled }) => {
   const handeClick = () => {
@@ -8,15 +9,25 @@ const Footer = ({ isScrolled }) => {
   }
 
   return !isScrolled ? (
-    <footer>
+    <motion.footer
+      initial={{y: 100}}
+      animate={{y: 0}}
+      transition={{bounce: 0, duration: .5}}
+    >
       Slide down to view more
       <FontAwesomeIcon icon={faAngleDown} />
-    </footer>
+    </motion.footer>
   ) : (
     <footer>
-      <div className="footerBtn" onClick={handeClick}>
+      <motion.div 
+        className="footerBtn" 
+        onClick={handeClick}
+        initial={{opacity: 0, y: -50}}
+        animate={{opacity: 1, y: 0}}
+        transition={{bounce: 0, duration: .5}}
+      >
         <FontAwesomeIcon icon={faAngleUp} />
-      </div>
+      </motion.div>
     </footer>
   );
 }
