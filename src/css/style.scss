@@ -321,6 +321,10 @@ div#location {
   i {
     font-size: 1.6rem;
   }
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 div#contact {
