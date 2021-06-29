@@ -21,7 +21,8 @@ const Footer = ({ isScrolled }) => {
     <footer>
       <motion.div 
         className="footerBtn" 
-        onClick={handeClick}
+        // onClick={handeClick}
+        onTap={handeClick}
         initial={{opacity: 0, y: -50}}
         animate={{opacity: 1, y: 0}}
         transition={{bounce: 0, duration: .5}}

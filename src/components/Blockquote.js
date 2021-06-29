@@ -1,5 +1,5 @@
 const Blockquote = ({ quote }) => (
-  <div class="blockquote">
+  <div className="blockquote">
     <h1 className="blockquote-text">
       {quote}
     </h1>
