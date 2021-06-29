@@ -10,8 +10,8 @@ const MinistryCard = ({ name, description, link, alt, img }) => {
       <div>
         <h1>{name}</h1>
         <p>{description}</p>
-        <button className="button">More info</button>
       </div>
+      <button className="button">More info</button>
     </motion.div>
   );
 };

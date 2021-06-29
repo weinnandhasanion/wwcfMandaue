@@ -58,7 +58,7 @@ const Home = () => {
             <a href="#services" className="button">
               GET STARTED
             </a>
-            <a href="#services" className="button">
+            <a href="#contact" className="button">
               CONTACT US
             </a>
           </div>

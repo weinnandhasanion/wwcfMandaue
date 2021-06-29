@@ -13,12 +13,11 @@
 
   footer {
     padding: 0.4em;
-    position: fixed;
+    position: sticky;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     color: white;
     z-index: 7;
     bottom: 0;
@@ -43,6 +42,7 @@ $primary: rgb(44, 108, 180);
 }
 
 .navbar {
+  height: 75px;
   z-index: 5;
   width: 100%;
   position: absolute;
@@ -50,6 +50,7 @@ $primary: rgb(44, 108, 180);
   background: rgba(44, 108, 180, 0.7);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 1em;
 
   .navbar-logo {
@@ -73,6 +74,13 @@ $primary: rgb(44, 108, 180);
         font-weight: 300;
       }
     }
+  }
+
+  svg {
+    padding: 0.5em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    display: none;
   }
 }
 
@@ -118,7 +126,7 @@ div#home {
     background-image: url("./../assets/pastor.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center left;
+    background-position: center;
     filter: brightness(65%);
     position: relative;
   }
@@ -191,6 +199,9 @@ div#ministries {
       background: white;
       border-radius: 5px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       div.img-cont {
         padding: 0;
@@ -205,6 +216,7 @@ div#ministries {
 
       div {
         padding: 1rem;
+        flex: 2;
       }
 
       h1 {
@@ -219,6 +231,7 @@ div#ministries {
       .button {
         border: 2px solid transparent;
         color: $primary;
+        margin-bottom: 1rem;
 
         &:hover {
           color: white;
@@ -244,6 +257,11 @@ div#location {
     margin-block-end: 0;
     color: $primary;
   }
+
+  .flex-full {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 
 .container {
@@ -254,6 +272,11 @@ div#location {
   width: 100% !important;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+
+  * {
+    flex: 1 1 300px;
+  }
 }
 
 .flex-contain {
@@ -302,6 +325,7 @@ div#contact {
   width: 100%;
   background: transparent;
   color: white !important;
+  padding-bottom: 4rem;
 
   div#fixed-bg {
     background-image: url("./../assets/contact.jpg");
@@ -377,5 +401,103 @@ div#contact {
     margin-block-start: 0;
     margin-block-end: 0;
     color: $primary;
+  }
+}
+
+div#footer {
+  height: 100px;
+  background: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div#logo-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 50px;
+    }
+
+    small {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    ul#nav-links {
+      display: none !important;
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  div#home {
+    min-height: 100vh;
+    height: 35em;
+    margin: 0;
+    position: relative;
+  
+    div.flex-contain {
+      color: white;
+  
+      div.title-cont {
+        max-width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+  
+        h1 {
+          font-size: 3rem;
+          font-weight: 800;
+          margin-block-start: 0;
+          margin-block-end: 0;
+          text-transform: uppercase;
+        }
+  
+        p {
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
+  
+        .button-cont {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem 0;
+
+          a {
+            font-size: 1.2rem;
+            margin: 0.3em;
+          }
+        }
+      }
+    }
+
+    .landing {
+      height: 100%;
+      background-image: url("./../assets/pastor.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: brightness(65%);
+      position: relative;
+    }
+  }
+
+  div#footer {
+    small {
+      font-size: .8rem;
+    }
   }
 }

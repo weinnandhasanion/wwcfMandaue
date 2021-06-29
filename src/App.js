@@ -7,6 +7,7 @@ import Ministries from "./components/Ministries";
 import Footer from "./components/Footer";
 import Location from "./components/Location";
 import Contact from "./components/Contact";
+import Footer2 from "./components/Footer2";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,6 +29,7 @@ const App = () => {
       <Location />
       <Contact />
       <Footer isScrolled={isScrolled} />
+      <Footer2 />
     </div>
   );
 };

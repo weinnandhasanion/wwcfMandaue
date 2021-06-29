@@ -14,7 +14,7 @@ const Footer = ({ isScrolled }) => {
       animate={{y: 0}}
       transition={{bounce: 0, duration: .5}}
     >
-      Slide down to view more
+      Scroll down to view more
       <FontAwesomeIcon icon={faAngleDown} />
     </motion.footer>
   ) : (

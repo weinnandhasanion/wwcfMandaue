@@ -1,4 +1,6 @@
 import images from "./../assets/images";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   return (
@@ -6,7 +8,7 @@ const Nav = () => {
       <div className="navbar-logo">
         <img src={images.logoWhite} alt="logo-white" className="logo" />
       </div>
-      <ul className="nav-links">
+      <ul className="nav-links" id="nav-links">
         <li>
           <a href="#home" className="nav-link">
             HOME
@@ -33,6 +35,7 @@ const Nav = () => {
           </a>
         </li>
       </ul>
+      <FontAwesomeIcon icon={faBars} style={{color: "white", fontSize: "24px"}} />
     </nav>
   );
 };
