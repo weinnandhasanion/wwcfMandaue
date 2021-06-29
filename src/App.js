@@ -9,11 +9,13 @@ import Location from "./components/Location";
 import Contact from "./components/Contact";
 import Footer2 from "./components/Footer2";
 import Blockquote from "./components/Blockquote";
+import smoothscroll from 'smoothscroll-polyfill';
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    smoothscroll.polyfill();
     window.addEventListener("scroll", () => {
       const yPos = window.pageYOffset;
 
@@ -25,7 +27,7 @@ const App = () => {
     <div>
       <Nav />
       <Home />
-      <Blockquote quote="Insert vision statement here..." />
+      <Blockquote quote='We see Spirit-filled men and women preaching the Word and planting churches in the key cities of the Philippines and the world.' />
       <Services />
       <Ministries />
       <Location />

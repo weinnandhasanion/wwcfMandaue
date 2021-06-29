@@ -7,6 +7,7 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent; 
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 
   a {
     text-decoration: none;
@@ -24,6 +25,8 @@
     z-index: 7;
     bottom: 0;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; 
   }
 }
 
@@ -332,7 +335,7 @@ div#contact {
   width: 100%;
   background: transparent;
   color: white !important;
-  padding-bottom: 4rem;
+  padding: 6rem 0 4rem 0;
 
   div#fixed-bg {
     background-image: url("./../assets/contact.jpg");
@@ -403,7 +406,7 @@ div#contact {
     color: white !important;
     text-align: center;
     font-size: 3.5rem;
-    padding: 2.5em 0 0 0;
+    padding: 0;
     font-weight: 700;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -444,6 +447,10 @@ div#footer {
     svg {
       display: block;
     }
+  }
+
+  .blockquote-text {
+    font-size: 3.5rem !important;
   }
 
   div#home {
@@ -500,6 +507,11 @@ div#footer {
       filter: brightness(65%);
       position: relative;
     }
+  }
+
+  div#ministries h1 {
+    padding: 2.5em;
+    padding-bottom: 0;
   }
 
   div#footer {

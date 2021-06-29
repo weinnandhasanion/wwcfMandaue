@@ -33,7 +33,7 @@ const Home = () => {
       <div className="flex-contain">
         <div className="title-cont">
           <h1 className="title">
-            Bringing God's word <br /> to the world.
+            Bringing God's word <br /> to the world
           </h1>
           <div
             style={{
@@ -65,7 +65,12 @@ const Home = () => {
             >
               GET STARTED
             </button>
-            <button onClick={() => document.querySelector("a[href='#contact']").click()} className="button">
+            <button
+              onClick={() =>
+                document.querySelector("a[href='#contacth1']").click()
+              }
+              className="button"
+            >
               CONTACT US
             </button>
           </div>
