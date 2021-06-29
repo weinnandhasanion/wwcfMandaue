@@ -41,6 +41,8 @@ const Home = () => {
               justifyContent: "center",
               alignItems: "center",
               height: "6rem",
+              width: "100%",
+              position: "relative",
             }}
           >
             {transitions((style, i) => (
@@ -55,12 +57,17 @@ const Home = () => {
             ))}
           </div>
           <div className="button-cont">
-            <a href="#services" className="button">
+            <button
+              onClick={() =>
+                document.querySelector("a[href='#services']").click()
+              }
+              className="button"
+            >
               GET STARTED
-            </a>
-            <a href="#contact" className="button">
+            </button>
+            <button onClick={() => document.querySelector("a[href='#contact']").click()} className="button">
               CONTACT US
-            </a>
+            </button>
           </div>
         </div>
       </div>
