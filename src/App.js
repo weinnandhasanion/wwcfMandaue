@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Location from "./components/Location";
 import Contact from "./components/Contact";
 import Footer2 from "./components/Footer2";
+import Blockquote from "./components/Blockquote";
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
     <div>
       <Nav />
       <Home />
+      <Blockquote quote="Insert vision statement here..." />
       <Services />
       <Ministries />
       <Location />

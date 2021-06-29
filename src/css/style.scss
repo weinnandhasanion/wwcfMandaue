@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 * {
   font-size: 1.6rem;
@@ -21,6 +22,7 @@
     color: white;
     z-index: 7;
     bottom: 0;
+    cursor: pointer;
   }
 }
 
@@ -499,5 +501,19 @@ div#footer {
     small {
       font-size: .8rem;
     }
+  }
+}
+
+.blockquote {
+  width: 100%;
+  background: $primary;
+  
+  .blockquote-text {
+    color: white;
+    font-size: 6rem;
+    padding: 8rem;
+    margin: 0 !important;
+    text-align: center;
+    font-family: 'Tangerine', cursive;
   }
 }
