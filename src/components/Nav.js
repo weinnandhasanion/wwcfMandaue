@@ -1,18 +1,33 @@
 import images from "./../assets/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { useAppContext } from "../contexts/AppContext";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Nav = () => {
+  const {
+    homeLinkRef,
+    isAccordionOpen: open,
+    setIsAccordionOpen,
+  } = useAppContext();
+
+  const handleClick = () => setIsAccordionOpen(!open);
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="homenav">
+      <FontAwesomeIcon
+        icon={open ? faTimes : faBars}
+        style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
+        onClick={handleClick}
+      />
       <div className="navbar-logo">
         <img src={images.logoWhite} alt="logo-white" className="logo" />
       </div>
       <ul className="nav-links" id="nav-links">
         <li>
-          <a href="#home" className="nav-link">
+          <Link to="#homenav" className="nav-link" ref={homeLinkRef}>
             HOME
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#services" className="nav-link">
@@ -35,7 +50,6 @@ const Nav = () => {
           </a>
         </li>
       </ul>
-      <FontAwesomeIcon icon={faBars} style={{color: "white", fontSize: "24px"}} />
     </nav>
   );
 };

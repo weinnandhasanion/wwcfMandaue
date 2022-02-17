@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import pastor from "./../assets/pastor.jpg";
 
-const MinistryCard = ({ name, description, link, alt, img }) => {
+const MinistryCard = ({ details: { name, description, link, alt, img } }) => {
   return (
     <motion.div className="card">
       <div className="img-cont">

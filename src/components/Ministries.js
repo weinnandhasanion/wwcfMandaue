@@ -74,15 +74,8 @@ const Ministries = () => {
       <Parallax bgImage={images.slider2} strength={300}>
         <h1>JOIN OUR MINISTRIES</h1>
         <div className="ministry-cards">
-          {ministries.map((m) => (
-            <MinistryCard
-              key={m.id}
-              name={m.name}
-              img={m.img}
-              description={m.description}
-              link={m.link}
-              alt={m.alt}
-            />
+          {ministries.map((ministry, i) => (
+            <MinistryCard key={`${ministry.name}-${i}`} details={ministry} />
           ))}
           <div style={{ width: "1px", height: "1px", flex: "0 0 auto" }}></div>
         </div>
