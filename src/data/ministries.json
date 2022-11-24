@@ -1,0 +1,91 @@
+[
+  {
+    "id": "worship-ministry",
+    "name": "Praise & Worship Ministry",
+    "ministryHeads": ["Bimboy Emperio", "Lemie Hasanion"],
+    "mission": "We exist to serve by leading God's people to experience His glorious presence every time through musical excellence and extravagant worship.",
+    "vision": "We see faithful worship ministers serving the Lord and His people with musical excellence, passion, and a life of worship that glorifies God and inspires others.",
+    "message": "We need more singers and instrumentalists who will lead people to God in worship!"
+  },
+  {
+    "id": "kids-ministry",
+    "name": "Kids Ministry",
+    "ministryHeads": ["Marivic Lumapas", "Jessa Abellanosa"],
+    "mission": "We are passionate mentors providing the needed care for the kids, raising them up to be followers of Jesus, and impacting them by our Biblical teachings and life.",
+    "vision": "We want to see a ministry for kids that is fun, focused on Christ, and full of love.",
+    "message": "We need more teachers and assistants who have a heart for the kids!"
+  },
+  {
+    "id": "media-ministry",
+    "name": "Multimedia Ministry",
+    "ministryHeads": ["Dexter Inso"],
+    "mission": "We want to see skillful artists using multimedia, modern technology, and innovation to inspre how this generation will see, hear, and experience Jesus.",
+    "vision": "We see artists with such creative potentials & committed passion, using their talents and technology to enhance how we present Christ and His Gospel to the world.",
+    "message": "We need more editors and content creators who have creative minds and skillful hands!"
+  },
+  {
+    "id": "young-teens-ministry",
+    "name": "Young Teens Ministry",
+    "ministryHeads": ["Alwin Tejedor", "Evelyn Tejedor"],
+    "mission": "We are committed to provide loving guidance for these young lives as well as living examples for them to follow in their crucial transition towards adolescence.",
+    "vision": "We see Christ-like young teens growing in their walk with Jesus, reflecting Him to everyone, and making a positive impact for their generation.",
+    "message": "We need more teachers and assistants who have a heart for our young teens!"
+  },
+  {
+    "id": "technical-ministry",
+    "name": "Technical Ministry",
+    "ministryHeads": ["Dawn Aldel Hasanion"],
+    "mission": "We provide excellent management and maintenance of all equipment, giving the best audio-visual experience for the congregation as a worship acceptable to God.",
+    "vision": "We see reliable stewards working diligently to enhance our every worship experience.",
+    "message": "We need more soundmen and crew who are tech-savvy and innovative!"
+  },
+  {
+    "id": "youth-ministry",
+    "name": "Youth Ministry",
+    "ministryHeads": ["Dawn Aldel Hasanion", "Lonalyn Hasanion"],
+    "mission": "To raise up a Christ-like generation fulfilling God's mandate by conquering the campuses and communities!",
+    "vision": "We see an army of young World Changers impacting their communities and campuses for King Jesus!",
+    "message": "We welcome new Youth to join us in bringing God's word to our campuses!"
+  },
+  {
+    "id": "ushering-ministry",
+    "name": "Ushering Ministry",
+    "ministryHeads": ["Bryan Jumao-as", "Marialyn Jumao-as"],
+    "mission": "To serve as doorkeepers in God's House by cheerfully welcoming His people, leading them to a place to sit, minimizing distractions, and ensuring order and cleanliness.",
+    "vision": "We want to turn every worship service into a life-changing moment where God's tangible presence is felt brought by an atmosphere of communal faith, unity, and order.",
+    "message": "We need more ushers whose smiles & service pleases God and others!"
+  },
+  {
+    "id": "couples-ministry",
+    "name": "Couples Ministry",
+    "ministryHeads": ["Bimboy Emperio", "Cathy Emperio"],
+    "mission": "We seek to build godly families by discipling couples to fulfill their God-given roles and responsibilities according to Biblical principles.",
+    "vision": "We envision building Christ-centered marriages where husbands and wives are healed, restored, and strengthened, resulting to healthy families, impacting our communities.",
+    "message": "Calling all husbands and wives to involve themselves for the sake of the next generation!"
+  },
+  {
+    "id": "maintenance-ministry",
+    "name": "Maintenance Ministry",
+    "ministryHeads": ["Randy Miñoza", "Alicia Hasanion"],
+    "mission": "We safeguard the health and safety of our Church family by ensuring a standard of cleanliness all throughout our Church family.",
+    "vision": "We see reliable servant-leaders working diligently to provide a clean and safe atmosphere for our Church.",
+    "message": "We need more volunteers who will help serve with us!"
+  },
+  {
+    "id": "widows-ministry",
+    "name": "Widows Ministry",
+    "subName": "Women of Worth",
+    "ministryHeads": ["Betty Enriquez", "Alicia Hasanion", "Marivic Lumapas"],
+    "mission": "To inspire widows to become women of worth by their godly lives and gracious service.",
+    "vision": "We see godly widows seasoned with grace and wisdom, serving God in the prime of their lives, inspiring the younger generations.",
+    "message": "Life is still beautiful! Let us passionately serve God in the prime of our lives."
+  },
+  {
+    "id": "kitchen-ministry",
+    "name": "Kitchen Ministry",
+    "ministryHeads": ["Betty Enriquez"],
+    "mission": "We strengthen our fellowship by preparing delightful meals for all with an attitude of joyful service.",
+    "vision": "We see leaders solidifying our bond as a family by faithfully serving delightful meals for everyone, resulting to a healthy, united, and loving community.",
+    "message": "We need more cooks and kitchen staff who enjoy preparing food!"
+  }
+]

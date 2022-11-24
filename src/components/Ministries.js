@@ -4,9 +4,9 @@ import Blockquote from "./Blockquote";
 
 const Ministries = () => {
   return (
-    <>
+    <div id="ministries">
       <Blockquote quote="Join our Ministries!" isTransparent />
-      <div id="ministries">
+      <div id="ministries-cont">
         <Parallax bgImage={Slider2} strength={300}>
           <div className="ministry-cards">
             <div
@@ -15,7 +15,7 @@ const Ministries = () => {
           </div>
         </Parallax>
       </div>
-    </>
+    </div>
   );
 };
 
