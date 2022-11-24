@@ -1,24 +1,6 @@
 import Blockquote from "./Blockquote";
 import ServiceCard from "./ServiceCard";
-
-const services = [
-  {
-    id: 0,
-    title: "Church Service",
-    schedule: "Sundays, 9:00 AM - 12:00 PM",
-    address: "3F Evergreen Bldg., AC Cortes Avenue, Mandaue City, Cebu",
-    description:
-      "Join our church service every Sunday from 9AM-12PM and learn more about God's Word and His plans for your life!",
-  },
-  {
-    id: 1,
-    title: "Power Prayer Night",
-    schedule: "Thursdays, 8:00 PM - 10:00 PM",
-    address: "Zoom Meetings",
-    description:
-      "Join our power prayer nights and help us pray for every aspect in our daily lives as we come to pray for you as well!",
-  },
-];
+import services from "data/services";
 
 const Services = () => {
   return (

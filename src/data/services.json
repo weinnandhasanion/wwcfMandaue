@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "title": "Worship Service",
+    "schedule": "Sundays, 8:00 AM - 11:00 AM",
+    "address": "3F Evergreen Bldg., AC Cortes Avenue, Mandaue City, Cebu",
+    "description": "Come and worship with us every Sunday from 8AM-11PM and learn more about God's Word and His plans for your life!"
+  },
+  {
+    "id": 1,
+    "title": "Prayer Night",
+    "schedule": "Thursdays, 8:00 PM - 10:00 PM",
+    "address": "3F Evergreen Bldg., AC Cortes Avenue, Mandaue City, Cebu",
+    "description": "Join our power prayer nights and help us pray for every aspect in our daily lives as we come to pray for you as well!"
+  }
+]
