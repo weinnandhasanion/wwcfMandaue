@@ -15,12 +15,10 @@ import { useInView } from "framer-motion";
 
 const App = () => {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
-  const homeLinkRef = useRef();
   const ref = useRef();
   const inView = useInView(ref);
 
   const providerValue = {
-    homeLinkRef,
     isAccordionOpen,
     setIsAccordionOpen,
     inView,

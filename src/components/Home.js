@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 import { useTransition, animated } from "react-spring";
 import "./../css/style.scss";
 
@@ -57,22 +58,12 @@ const Home = () => {
             ))}
           </div>
           <div className="button-cont">
-            <button
-              onClick={() =>
-                document.querySelector("a[href='#services']").click()
-              }
-              className="button"
-            >
+            <HashLink className="button" to="#services">
               GET STARTED
-            </button>
-            <button
-              onClick={() =>
-                document.querySelector("a[href='#contacth1']").click()
-              }
-              className="button"
-            >
+            </HashLink>
+            <HashLink className="button" to="#contact">
               CONTACT US
-            </button>
+            </HashLink>
           </div>
         </div>
       </div>

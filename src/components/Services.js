@@ -4,9 +4,9 @@ import services from "data/services";
 
 const Services = () => {
   return (
-    <>
+    <div id="services">
       <Blockquote quote="We see Spirit-filled men and women preaching the Word and planting churches in the key cities of the Philippines and the world." />
-      <div id="services">
+      <div>
         <div className="container">
           <h1>JOIN OUR SERVICES</h1>
           <div className="flex-full">
@@ -22,7 +22,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

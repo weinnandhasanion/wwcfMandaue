@@ -2,7 +2,9 @@
   {
     "id": "worship-ministry",
     "name": "Praise & Worship Ministry",
+    "bgimg": "worship-team.jpeg",
     "ministryHeads": ["Bimboy Emperio", "Lemie Hasanion"],
+    "pathnames": ["bimboy.png", ""],
     "mission": "We exist to serve by leading God's people to experience His glorious presence every time through musical excellence and extravagant worship.",
     "vision": "We see faithful worship ministers serving the Lord and His people with musical excellence, passion, and a life of worship that glorifies God and inspires others.",
     "message": "We need more singers and instrumentalists who will lead people to God in worship!"

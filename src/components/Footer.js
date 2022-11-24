@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { useAppContext } from "../contexts/AppContext";
 
 const Footer = () => {
-  const { homeLinkRef, inView } = useAppContext();
+  const { inView } = useAppContext();
 
-  const handeClick = () => homeLinkRef.current.click();
+  const handeClick = () => window.scrollTo(0, 0);
 
   return inView ? (
     <motion.footer

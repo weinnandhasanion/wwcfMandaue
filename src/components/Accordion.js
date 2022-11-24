@@ -24,7 +24,7 @@ const Accordion = () => {
         <li>
           <Link
             onClick={handleClose}
-            to="#homenav"
+            to="#home"
             className="nav-link"
             ref={homeLinkRef}
           >

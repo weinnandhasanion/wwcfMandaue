@@ -74,6 +74,7 @@ $primary: rgb(44, 108, 180);
 }
 
 .navbar {
+  position: absolute;
   height: 75px;
   z-index: 5;
   width: 100%;
@@ -145,6 +146,7 @@ div#home {
       }
 
       .button-cont {
+        margin: 1.5rem 0;
         * {
           margin: 0.3em;
         }
@@ -183,91 +185,87 @@ div#services {
 }
 
 div#ministries-cont {
-  h1 {
-    text-align: center;
-    font-size: 3.5rem;
-    padding: 2.5em 0 0 0;
-    font-weight: 700;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    color: white;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+    position: absolute;
   }
 
-  .ministry-cards {
-    padding: 0 0 3em 0;
-    box-sizing: border-box;
+  > div {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-right: 1em;
+    flex-direction: column;
+    padding: 5rem;
+    flex: 1;
 
-    h1 {
-      padding: 0;
-    }
-
-    &::-webkit-scrollbar {
-      height: 5px;
-      width: 5px;
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-
-    &::-webkit-scrollbar-thumb:horizontal {
-      background: $primary;
-      border-radius: 5px;
-    }
-
-    .card {
-      margin: 2.5em 1em;
-      flex: 0 0 auto;
-      height: 375px;
-      max-width: 14em !important;
-      padding: 0 !important;
-      overflow: hidden;
-      background: white;
-      border-radius: 5px;
-      text-align: center;
+    > div {
+      flex: 1;
+      z-index: 2;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
 
-      div.img-cont {
-        padding: 0;
-        height: 150px;
-        width: 100%;
-
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover !important;
-        }
+      h1.ministry-title {
+        font-weight: 500;
+        color: white;
+        font-size: 7.5rem;
+        margin: 0 !important;
       }
+    }
 
-      div {
-        padding: 1rem;
-        flex: 2;
-      }
+    > div:nth-child(2) {
+      flex-direction: row;
+      display: flex;
+      color: white;
+      align-items: flex-end;
+      text-align: center;
 
-      h1 {
-        color: black !important;
-        font-size: 2rem !important;
+      h2 {
+        font-size: 3rem;
+        margin: 0;
       }
 
       p {
-        font-size: 1.3rem;
+        padding: 0 7rem;
+      }
+    }
+
+    > div:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      color: white;
+
+      > h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        margin: 0;
       }
 
-      .button {
-        color: $primary;
-        border: 2px solid transparent;
-        background: unset;
-        margin-bottom: 1rem;
+      > div {
+        display: flex;
+        gap: 2rem;
 
-        &:hover {
-          filter: brightness(70%);
+        .ministry-head {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+
+          img {
+            height: 4rem;
+            border-radius: 100%;
+          }
+
+          p {
+            font-size: 2rem;
+            font-weight: 300;
+          }
         }
       }
     }
@@ -524,7 +522,8 @@ div#footer {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          margin: 1rem 0;
+          margin: 1.5rem 0;
+          padding: 1rem 0;
 
           a {
             font-size: 1.2rem;

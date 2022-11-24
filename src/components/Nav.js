@@ -7,9 +7,8 @@ import { forwardRef } from "react";
 
 const navLinks = [
   {
-    id: "#home",
+    id: "",
     name: "HOME",
-    hasRef: true,
   },
   {
     id: "#services",
@@ -30,16 +29,12 @@ const navLinks = [
 ];
 
 const Nav = forwardRef((_, ref) => {
-  const {
-    homeLinkRef,
-    isAccordionOpen: open,
-    setIsAccordionOpen,
-  } = useAppContext();
+  const { open, setIsAccordionOpen } = useAppContext();
 
   const handleClick = () => setIsAccordionOpen(!open);
 
   return (
-    <nav className="navbar" id="homenav" ref={ref}>
+    <nav className="navbar" ref={ref}>
       <FontAwesomeIcon
         icon={open ? faTimes : faBars}
         style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
@@ -51,11 +46,7 @@ const Nav = forwardRef((_, ref) => {
       <ul className="nav-links" id="nav-links">
         {navLinks.map((link) => (
           <li key={link.id}>
-            <Link
-              to={link.id}
-              className="nav-link"
-              ref={link.hasRef ? homeLinkRef : null}
-            >
+            <Link to={link.id} className="nav-link">
               {link.name}
             </Link>
           </li>
