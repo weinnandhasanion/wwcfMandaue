@@ -1,10 +1,35 @@
-import images from "./../assets/images";
+import { LogoWhite } from "assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../contexts/AppContext";
 import { HashLink as Link } from "react-router-hash-link";
+import { forwardRef } from "react";
 
-const Nav = () => {
+const navLinks = [
+  {
+    id: "#home",
+    name: "HOME",
+    hasRef: true,
+  },
+  {
+    id: "#services",
+    name: "SERVICES",
+  },
+  {
+    id: "#ministries",
+    name: "MINISTRIES",
+  },
+  {
+    id: "#location",
+    name: "LOCATION",
+  },
+  {
+    id: "#contact",
+    name: "CONTACT",
+  },
+];
+
+const Nav = forwardRef((_, ref) => {
   const {
     homeLinkRef,
     isAccordionOpen: open,
@@ -14,44 +39,30 @@ const Nav = () => {
   const handleClick = () => setIsAccordionOpen(!open);
 
   return (
-    <nav className="navbar" id="homenav">
+    <nav className="navbar" id="homenav" ref={ref}>
       <FontAwesomeIcon
         icon={open ? faTimes : faBars}
         style={{ color: "white", fontSize: "24px", cursor: "pointer" }}
         onClick={handleClick}
       />
       <div className="navbar-logo">
-        <img src={images.logoWhite} alt="logo-white" className="logo" />
+        <img src={LogoWhite} alt="logo-white" className="logo" />
       </div>
       <ul className="nav-links" id="nav-links">
-        <li>
-          <Link to="#homenav" className="nav-link" ref={homeLinkRef}>
-            HOME
-          </Link>
-        </li>
-        <li>
-          <a href="#services" className="nav-link">
-            SERVICES
-          </a>
-        </li>
-        <li>
-          <a href="#ministries" className="nav-link">
-            MINISTRIES
-          </a>
-        </li>
-        <li>
-          <a href="#location" className="nav-link">
-            LOCATION
-          </a>
-        </li>
-        <li>
-          <a href="#contacth1" className="nav-link">
-            CONTACT
-          </a>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.id}>
+            <Link
+              to={link.id}
+              className="nav-link"
+              ref={link.hasRef ? homeLinkRef : null}
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
-};
+});
 
 export default Nav;

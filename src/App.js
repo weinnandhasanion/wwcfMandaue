@@ -8,31 +8,30 @@ import Footer from "./components/Footer";
 import Location from "./components/Location";
 import Contact from "./components/Contact";
 import Footer2 from "./components/Footer2";
-import Blockquote from "./components/Blockquote";
 import Accordion from "./components/Accordion";
 import { AppContext } from "./contexts/AppContext";
-import { useScroll } from "./hooks/useScroll";
 import { BrowserRouter as Router } from "react-router-dom";
+import { useInView } from "framer-motion";
 
 const App = () => {
-  const { scrollY } = useScroll();
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const homeLinkRef = useRef();
+  const ref = useRef();
+  const inView = useInView(ref);
 
   const providerValue = {
-    scrollY,
     homeLinkRef,
     isAccordionOpen,
     setIsAccordionOpen,
+    inView,
   };
 
   return (
     <Router>
       <AppContext.Provider value={providerValue}>
-        <Nav />
+        <Nav ref={ref} />
         <Accordion />
         <Home />
-        <Blockquote quote="We see Spirit-filled men and women preaching the Word and planting churches in the key cities of the Philippines and the world." />
         <Services />
         <Ministries />
         <Location />

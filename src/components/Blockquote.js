@@ -1,8 +1,9 @@
-const Blockquote = ({ quote }) => (
-  <div className="blockquote">
-    <h1 className="blockquote-text">
-      "{quote}"
-    </h1>
+const Blockquote = ({ quote, isTransparent = false }) => (
+  <div
+    className="blockquote"
+    style={{ background: isTransparent ? "transparent" : "" }}
+  >
+    <h1 className="blockquote-text">{quote}</h1>
   </div>
 );
 

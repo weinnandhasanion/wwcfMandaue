@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { useAppContext } from "../contexts/AppContext";
 
 const Footer = () => {
-  const { homeLinkRef, scrollY } = useAppContext();
+  const { homeLinkRef, inView } = useAppContext();
 
   const handeClick = () => homeLinkRef.current.click();
 
-  return scrollY === 0 ? (
+  return inView ? (
     <motion.footer
       initial={{ y: 100 }}
       animate={{ y: 0 }}
@@ -22,7 +22,7 @@ const Footer = () => {
     <footer>
       <motion.div
         className="footerBtn"
-        onTap={handeClick}
+        onClick={handeClick}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ bounce: 0, duration: 0.5 }}
